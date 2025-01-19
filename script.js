@@ -4,11 +4,13 @@ const fires = document.querySelectorAll('.fuego');
 const bear = document.getElementById('bear');
 const blowButton = document.getElementById('blowButton');
 const callButton =  document.getElementById('callButton');
+const shop = document.getElementById('shop');
 
 window.onload = function() {
     setTimeout(function() {
       blowButton.style.display = 'block';  
       setTimeout(function() {
+        shop.style.display = 'block';
         callButton.style.display = 'block'; 
       }, 2000);  
     }, 7000);  

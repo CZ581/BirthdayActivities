@@ -220,7 +220,19 @@ body {
 #callButton:hover {
   color:whitesmoke; /* 悬停时字体颜色变化 */
 }
-
+#shop{
+  position: absolute;
+        top: 109%; /* 按钮垂直位置，视需求调整 */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1px 2px;
+        color: #8b6a60;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: 'Lato', sans-serif;
+        display: none; /* 初始隐藏 */
+}
 /* ============================================== Text
 */
 
@@ -240,5 +252,8 @@ body {
   font-weight: 300;
   font-style: italic;
   text-align: center;
+  white-space: normal; /* 允许换行 */
+  word-wrap: break-word; /* 防止长单词溢出 */
+  display: inline-block; /* 让按钮支持换行 */
   /* font-size: 1.4em; */
 }
