@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic);
+
+html,
+body {
+  transform: scale(1.2); /* 设置放大倍数 */
+  transform-origin: center center; /* 设置缩放的原点为页面的左上角 */
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #ee9ca7;
+}
+
+#cake {
+  display: block;
+  position: relative;
+  margin: -10em auto 0 auto;
+}
+
+/* ============================================== Candle
+*/
+
+.velas {
+  background: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: 388px;
+  left: 50%;
+  margin-left: -2.4px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 35px;
+  transform: translateY(-500px);
+  backface-visibility: hidden;
+  animation: in 500ms 6s ease-out forwards;
+}
+  
+
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ============================================== Fire
+*/
+
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.6px;
+  width: 6.66666667px;
+  height: 18px;
+  opacity: 1; /* 火焰最初可见 */
+}
+
+.fuego:nth-child(1) {
+  animation: fuego 2s 6.5s infinite;
+}
+
+.fuego:nth-child(2) {
+  animation: fuego 1.5s 6.5s infinite;
+}
+
+.fuego:nth-child(3) {
+  animation: fuego 1s 6.5s infinite;
+}
+
+.fuego:nth-child(4) {
+  animation: fuego 0.5s 6.5s infinite;
+}
+
+.fuego:nth-child(5) {
+  animation: fuego 0.2s 6.5s infinite;
+}
+
+/* ============================================== Animation Fire
+*/
+
+@keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ============================================== Bear Animation */
+.bear {
+    display: none;
+    position: absolute;
+    bottom: 80px; /* 小熊在蛋糕上方 */
+    left: 50%;
+    margin-left: -75px; /* 小熊居中 */
+    width: 150px; /* 增大小熊 */
+    height: 150px; /* 增大小熊 */
+    background: url('bear.png') no-repeat center center;
+    background-size: contain;
+    animation: popUp 1s forwards;
+    cursor: pointer; /* 鼠标悬停时显示为手指，表示可以点击 */
+  }
+  
+  /* 动画调整 */
+  @keyframes popUp {
+    0% {
+      transform: translateY(150px); /* 动画开始时，小熊从下方弹出 */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* ============================================== Speech Bubble */
+  .bear::after {
+    content: "谢谢小姑娘的心意。\A你可以添加下面这些qq号和我对话\A bot1：3232457653\A bot2：3100979734\A  bot3：178710689\A bot4：3869057584 "; 
+    white-space: pre-line;
+    position: absolute;
+    top: -85px; /* 气泡框在小熊头部上方 */
+    left: 50%;
+    margin-left: -100px; /* 调整气泡框的水平居中 */
+    width: 180px; /* 调整气泡框宽度 */
+    padding: 7.5px 10px; /* 增加气泡框内边距 */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    color: #8b6a60;
+    font-size: 0.5em;
+    animation: popUpText 1s forwards;
+  }
+  
+  /* 为气泡框添加文本内容 */
+  .bear::before {
+    display: block;
+    margin-bottom: 10px; /* 文字与链接之间的间距 */
+  }
+  
+  /* 让气泡框的文字和链接有个动画效果 */
+  @keyframes popUpText {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }  
+/* ============================================== Button
+*/
+#blowButton {
+    position: absolute;
+    top: 100%; /* 按钮垂直位置，视需求调整 */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 1px 1px 1px;
+    background-color: #ee9ca7; /* 按钮背景颜色 */
+    color: #8b6a60;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    display: none; /* 初始隐藏 */
+  }
+#callButton {
+        position: absolute;
+        top: 106%; /* 按钮垂直位置，视需求调整 */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1px 2px;
+        background-color: #ee9ca7; /* 按钮背景颜色 */
+        color: #8b6a60;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        font-family: 'Lato', sans-serif;
+        display: none; /* 初始隐藏 */
+}
+  
+
+/* ============================================== Text
+*/
+
+.text {
+  color: #8b6a60;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  h1 {
+    font-size: 1.4em;
+  }
+}
+.bttext{
+    color: #8b6a60;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  /* font-size: 1.4em; */
+}
