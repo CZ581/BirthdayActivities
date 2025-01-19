@@ -122,7 +122,7 @@ body {
     margin-left: -75px; /* 小熊居中 */
     width: 150px; /* 增大小熊 */
     height: 150px; /* 增大小熊 */
-    background: url('bear.png') no-repeat center center;
+    background: url('character.png') no-repeat center center;
     background-size: contain;
     animation: popUp 1s forwards;
     cursor: pointer; /* 鼠标悬停时显示为手指，表示可以点击 */
