@@ -139,7 +139,10 @@ body {
       opacity: 1;
     }
   }
-  
+  .bear:hover{
+    width: 160px; /* 增大小熊 */
+    height: 160px; /* 增大小熊 */
+  }
   /* ============================================== Speech Bubble */
   .bear::after {
     content: "谢谢小姑娘的心意。\A你可以添加下面这些qq号和我对话\A bot1：3232457653\A bot2：3100979734\A  bot3：178710689\A bot4：3869057584 "; 
@@ -211,7 +214,12 @@ body {
         font-family: 'Lato', sans-serif;
         display: none; /* 初始隐藏 */
 }
-  
+#blowButton:hover {
+  color:whitesmoke; 
+}
+#callButton:hover {
+  color:whitesmoke; /* 悬停时字体颜色变化 */
+}
 
 /* ============================================== Text
 */
