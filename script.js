@@ -5,6 +5,7 @@ const bear = document.getElementById('bear');
 const blowButton = document.getElementById('blowButton');
 const callButton =  document.getElementById('callButton');
 const shop = document.getElementById('shop');
+const playButton = document.getElementById('playButton');
 
 window.onload = function() {
     setTimeout(function() {
@@ -12,8 +13,9 @@ window.onload = function() {
       setTimeout(function() {
         shop.style.display = 'block';
         callButton.style.display = 'block'; 
-      }, 2000);  
-    }, 7000);  
+        playButton.style.display = 'block';
+      }, 1000);  
+    }, 1000);  
   };
 
 // 吹熄蜡烛函数
@@ -33,3 +35,11 @@ function callBear() {
   }
   // 监听按钮点击事件
   callButton.addEventListener('click', callBear);
+
+  // 播放音频
+    const audio = new Audio('66.mp3');  // 创建音频对象，路径为相对路径或URL
+
+    // 为按钮添加点击事件
+    playButton.addEventListener('click', () => {
+      audio.play();  // 播放音频
+    });

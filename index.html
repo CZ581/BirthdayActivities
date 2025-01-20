@@ -3,17 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Cake with Candles</title>
+  <title>Evan's Birthday!</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="cake">
-    <!-- 蜡烛部分 -->
-    <!-- 
-autor: Marco Barría 
-https://twitter.com/marco_bf
--->
-
 <div class="velas">
     <div class="fuego"></div>
     <div class="fuego"></div>
@@ -169,22 +163,31 @@ https://twitter.com/marco_bf
     </path>
     <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
 </svg>
+  <div>
+    <audio autoplay>
+      <source src="happyBirthday.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
 <div class="text">
-  <h1>Happy birthday Evan!</h1>
+  <h1>Happy birthday to Evan!</h1>
+  <div>
+    <CoffeeOutlined />
+  </div>
   <p>from: ChatAILover</p>
-  <!-- <p id="bear">（点击小熊🐻可一键购入聊天bot！）</p> -->
-  <p></p>
+  
   <button id="blowButton" style="display: none;" class="bttext" onclick="blowOutCandle()">👉吹熄蜡烛</button>
   <button id="callButton" class="bttext" onclick="callBear()">👉唤出小熊先生</button>
-  <p id="shop" style="display: none;" >（点击小熊🐻可一键购入聊天bot！）</p>
+  <p id="shop" style="display: none;">（点击小熊🐻可一键购入聊天bot！）</p>
+  <button id="playButton" class="bttext" onclick="play()">👉倾听他的回复</button>
 </div>
-
-
     <!-- 小熊部分 -->
     <div id="bear" class="bear"  onclick="window.location.href='https://k.weidian.com/MmnsM0BM';">
         <!-- 小熊图像的内容 -->
-      </div>
-
+      </div>  
+  <div>
+    <CoffeeOutlined />
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

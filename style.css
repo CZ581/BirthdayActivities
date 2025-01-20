@@ -189,11 +189,11 @@ body {
     top: 100%; /* 按钮垂直位置，视需求调整 */
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 1px 1px 1px;
+    padding: 10px 1px 1px 10px;
     background-color: #ee9ca7; /* 按钮背景颜色 */
-    color: #8b6a60;
+    color: whitesmoke;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     font-family: 'Lato', sans-serif;
@@ -206,23 +206,42 @@ body {
         transform: translateX(-50%);
         padding: 1px 2px;
         background-color: #ee9ca7; /* 按钮背景颜色 */
-        color: #8b6a60;
+        color: whitesmoke;
         border: none;
-        border-radius: 5px;
+        border-radius: 10px;
         font-size: 16px;
         cursor: pointer;
         font-family: 'Lato', sans-serif;
         display: none; /* 初始隐藏 */
 }
+#playButton {
+  position: absolute;
+  top: 111%; /* 按钮垂直位置，视需求调整 */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1px 2px;
+  background-color: #ee9ca7; /* 按钮背景颜色 */
+  color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  display: none; /* 初始隐藏 */
+}
 #blowButton:hover {
-  color:whitesmoke; 
+  color:#8b6a60; 
 }
 #callButton:hover {
-  color:whitesmoke; /* 悬停时字体颜色变化 */
+  color:#8b6a60; /* 悬停时字体颜色变化 */
 }
+#playButton:hover {
+  color:#8b6a60; /* 悬停时字体颜色变化 */
+}
+
 #shop{
   position: absolute;
-        top: 109%; /* 按钮垂直位置，视需求调整 */
+        top: 114%; /* 按钮垂直位置，视需求调整 */
         left: 50%;
         transform: translateX(-50%);
         padding: 1px 2px;
@@ -247,7 +266,7 @@ body {
   }
 }
 .bttext{
-    color: #8b6a60;
+    color: whitesmoke;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-style: italic;
