@@ -14,8 +14,8 @@ window.onload = function() {
         shop.style.display = 'block';
         callButton.style.display = 'block'; 
         playButton.style.display = 'block';
-      }, 1000);  
-    }, 1000);  
+      }, 2000);  
+    }, 7000);  
   };
 
 // 吹熄蜡烛函数
